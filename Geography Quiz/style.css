@@ -1,0 +1,661 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:500");
+
+/* Custom Font */
+
+@font-face {
+    font-family: Geography;
+    /*  src: url(treasure_map/Treamd.ttf);*/
+}
+
+/* Colour text */
+
+.letterE {
+    color: pink;
+}
+
+.letterN, .letterR {
+    color: orange;
+}
+.letterT {
+    color: limegreen;
+}
+
+body {
+    margin: 0;
+}
+
+/* Geography Quiz Curve */
+
+path {
+    fill: transparent;
+}
+
+text {
+    fill: yellow;
+    font-size: 60px;
+}
+
+/* Add bounce animation */
+#intro {
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+/* Introduction text - Geography Quiz */
+#introText {
+    width: 100%;
+    text-align: center;
+    font-size: 5em;
+    left: 0;
+    z-index: 2;
+    color: white;
+    font-family: sans-serif;
+    -webkit-animation: scale-in-center 0.5s ease-out both;
+    animation: scale-in-center 0.5s ease-out both;
+    cursor: pointer;
+}
+
+#quote {
+    font-weight: inherit;
+}
+
+/* Center Select Continent Button */
+#selectButton {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    -webkit-animation: scale-in-center 0.5s ease-out both 0.5s;
+    animation: scale-in-center 0.5s ease-out both 0.5s;
+}
+
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+
+/* Modal layout*/
+#buttonWrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+
+}
+
+#gridLayoutWrapper {
+    padding-top: 4%;
+}
+
+.exitWrapper {
+    -webkit-animation: fade-in 0.8s ease-in-out both;
+    animation: fade-in 0.8s ease-in-out both;
+}
+
+
+.threeButtonLayout {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    -webkit-animation: fade-in 0.8s ease-in-out 0.7s both;
+    animation: fade-in 0.8s ease-in-out 0.7s both;
+}
+
+/* Increase buttons Easy, Medium and Hard margin top and bottom*/
+.btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.exitWrapper {
+    width: 100%;
+    text-align: right;
+}
+
+/* Closing X */
+.fa-close {
+    font-size: 2em;
+    margin-top: 25px;
+    margin-right: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+
+/* Display continent buttons */
+
+/* Button layout */
+.openButton {
+    -webkit-appearance: none;
+    background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+    background: linear-gradient(to right, #006994 0%, yellow 50%, orange 100%);
+    background-size: 500%;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #fff;
+    cursor: pointer;
+    font: 1.5em Raleway, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 5rem;
+    letter-spacing: 0.05em;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 20rem;
+}
+
+.openButton:hover {
+    animation-name: gradient;
+    -webkit-animation-name: gradient;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+#earthOpacity {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+
+/* Earth div aniimation */
+#earth {
+    position: relative;
+    height: 100vh;
+    transition: transform 200ms linear;
+    animation: rotate 40s linear infinite;
+    color: #000;
+    background: url(images/6de8a19c8e6c59b4313439fcfbe887f7.jpg);
+    background-size: cover;
+
+}
+
+#earth:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+
+}
+
+#earth:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+}
+
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+
+/* Quiz Layout */
+.quizWrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    font-size: 15px;
+/*    font-family: cursive;*/
+    font-weight: 300;
+    text-align: center;
+
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin-top: 35px;
+}
+
+.active-slide {
+    opacity: 1;
+    z-index: 2;
+}
+
+.quiz-container {
+    position: relative;
+    height: 200px;
+}
+
+#quizButtonWrapper {
+    -webkit-animation: slide-in-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    animation: slide-in-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    width: 100%;
+    margin-top: 1.5%;
+    z-index: 111;
+}
+
+.quizButton {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    background-color: orange;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+.quizButton:hover {
+    opacity: 0.7;
+}
+
+.question {
+    color: yellow;
+    font-size: 33px;
+    margin-bottom: 10px;
+}
+
+.answers {
+    color: pink;
+    text-align: left;
+    display: inline-block;
+}
+
+.answers label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.quizWrapper h1 {
+    font-weight: 300;
+    margin: 0px;
+    padding: 10px;
+    font-size: 45px;
+    color: lawngreen;
+    -webkit-animation: slide-in-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    animation: slide-in-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+}
+
+#centQuiz {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    -webkit-animation: slide-in-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    animation: slide-in-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+}
+
+#levelLabel {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    color: yellow;
+    font-weight: bolder;
+    font-family: fantasy;
+    -webkit-animation: fade-in 0.8s ease-in-out 0.7s both;
+    animation: fade-in 0.8s ease-in-out 0.7s both;
+}
+
+#results {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.5em;
+    color: white;
+}
+
+/* Result page */
+
+#resultsPage {
+    display: none;
+    position: absolute;
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/02/21/52/map-2033939_960_720.jpg) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+	-webkit-animation: slit-in-vertical 0.8s ease-in-out both;
+	        animation: slit-in-vertical 0.8s ease-in-out both;
+}
+
+#resultPageOpacity {
+    background-color: rgba(0,0,0, 0.5);
+    height: 100%;
+}
+
+#feedback {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+	-webkit-animation: fade-in 1.2s ease-in-out 1s both;
+	        animation: fade-in 1.2s ease-in-out 1s both;
+}
+
+.feedbackText {
+    color: white;
+    font-size: 3em;
+}
+
+.smaller {
+    font-size: 1.5em;
+}
+
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+
+/* Make website responsive */
+
+@media screen and (max-width: 950px) {}
+
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 700px) {
+    #gridLayoutWrapper {
+        padding-top: 15%;
+    }
+
+    .quizButton {
+        font-size: 0.8em;
+    }
+
+    #levelLabel {
+        font-size: 1.4em;
+    }
+
+    .openButton {
+        width: 18rem;
+    }
+
+
+    .quizWrapper h1 {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #introText {
+        font-size: 3em;
+    }
+
+    #gridLayoutWrapper {
+        padding-top: 5%;
+    }
+
+    .threeButtonLayout {
+        font-size: 0.8em;
+    }
+
+    .openButton {
+        font: 1em Raleway, sans-serif;
+        width: 15rem;
+    }
+    
+    .feedbackText {
+        font-size: 2em;
+    }
+    
+    .answers label {
+        font-size: 23px;
+    }
+
+    .question {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #quizButtonWrapper {
+        margin-top: 0;
+    }
+
+
+    
+    
+}
+
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+
+/* A N I M A T I O N S */
+
+/* Choose Continent #selectButton animation*/
+
+@-webkit-keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* buttonWrapper Animation */
+@-webkit-keyframes scale-in-ver-top {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-ver-top {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+
+/* threeButtonLayout and exitWrapper Animation */
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Quiz Enter Animation */
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Button Animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+/* Feedback Background animation*/
+@-webkit-keyframes slit-in-vertical {
+  0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+            transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+}
+@keyframes slit-in-vertical {
+  0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+            transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+}
+
+/* Feedback Text Animation */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Make World map Rotate */
+@keyframes rotate {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 1640px 0;
+    }
+}

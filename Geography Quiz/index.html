@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geography Quiz</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/earth.jpeg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body id="indexBody">
+
+	<div id="intro">
+
+			<div id="earth"></div> 
+            
+			<!-- Main button to open the menu -->
+			<div id="selectButton">
+                <h1 id="geographyQuizText">
+                    
+                <svg viewBox="0 0 500 150">
+                    <path id="curve" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
+                    <text width="500">
+                      <textPath xlink:href="#curve">
+                          &nbsp;Kaleem's Quiz
+                          
+                      </textPath>
+                    </text>
+                  </svg>
+                </h1>
+                <div id="introText">
+                <span class="letterE">E</span><span class="letterN">N</span><span class="letterT">T</span><span class="letterE">E</span><span class="letterR">R</span>
+                </div>
+			</div>
+
+
+			<!-- Contains the buttons for the quiiz -->
+			<div id="buttonWrapper">
+
+				<div class="exitWrapper"><i class="fa fa-close" id="closeMenu"></i></div>
+
+				<div id="gridLayoutWrapper">
+					<h1 id="levelLabel">Select difficulty</h1>
+					<div class="threeButtonLayout">
+						<button class="openButton btn columns" id="btn1">Easy</button>
+						<button class="openButton btn columns" id="btn2">Medium</button>
+						<button class="openButton btn columns" id="btn3">Hard</button>
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+			<!-- Give a little bit of dark to the background MAP div -->
+			<div id="earthOpacity">
+			</div>
+
+			<div class="quizWrapper" id="quizWrapperID">
+                
+                <div class="exitWrapper"><i class="fa fa-close" id="closeQuiz"></i></div>
+                
+                
+				<h1 id="quizDifficultyText"></h1>
+                
+					<div id="quizButtonWrapper">
+						<button id="previous" class="quizButton">Previous</button>
+						<button id="next" class="quizButton quizButtonMargin">Next</button>
+						<button id="submit" class="quizButton">Submit Quiz</button>
+						
+					</div>
+                
+				<div id="centQuiz">
+					<div class="quiz-container">
+						<div id="quiz"></div>
+					</div>
+
+					
+				</div>
+<!--				<div id="results"></div>-->
+				<script  src="./QuizScript.js"></script>
+                
+			</div>
+        
+            <div id = "resultsPage">
+                <div id="resultPageOpacity">
+                
+                        <div id="feedback">
+                        <h1 class = "feedbackText" id="feedbackTextResult">Feedback Text</h1>
+
+                        <button class="openButton btn columns" id="btn4">Finish</button>
+
+                        <h4 class="feedbackText smaller" id="correctAnswerText"></h4>
+                    </div>
+                </div>
+                
+            </div>
+			
+		</div>
+
+
+	<!-- Loads the button click logic JavaScript file -->
+	<script type="text/javascript" src="ButtonLogic.js"></script>
+</body>
+</html>

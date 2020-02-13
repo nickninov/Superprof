@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quote Beater - Car Insurance</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/noui/nouislider.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div id="background">
+		<div class="country-wrap">
+
+			<!--<div class="mountain-1"></div>
+			<div class="mountain-2"></div>-->
+			
+			<div class="sun"></div>
+			<div class="grass"></div>
+			<div class="street">
+				<div class="car">
+				<!--<div class="car-base"></div>-->
+				<div class="car-body">
+					<div class="car-top-back">
+						<div class="back-curve"></div>
+					</div>
+					<div class="car-gate"></div>
+					<div class="car-top-front">
+						<div class="wind-sheild"></div>
+					</div>
+					<div class="bonet-front"></div>
+					<div class="stepney"></div>
+				</div>
+				<div class="boundary-tyre-cover">
+					<div class="boundary-tyre-cover-back-bottom"></div>
+					<div class="boundary-tyre-cover-inner"></div>	
+				</div>
+				<div class="tyre-cover-front">
+					<div class="boundary-tyre-cover-inner-front"></div>
+				</div>
+				<div class="base-axcel">
+					
+				</div>
+				<div class="front-bumper"></div>
+				<div class="tyre">		
+					<div class="gap"></div>	
+				</div>
+				<div class="tyre front">
+					<div class="gap"></div>	
+				</div>
+				<div class="car-shadow"></div>
+			</div>
+			</div>
+			<div class="street-stripe"></div>
+		  
+			
+		</div>
+		<!-- partial -->
+
+	</div>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="PHP/send.php" method="POST">
+				<span class="contact100-form-title">
+					Details
+				</span>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+					<span class="label-input100">FULL NAME *</span>
+					<input class="input100" type="text" name="name" placeholder="Enter Your Name">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
+					<span class="label-input100">Email *</span>
+					<input class="input100" type="text" name="email" placeholder="Enter Your Email ">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Phone</span>
+					<input class="input100" type="text" name="phone" placeholder="Enter Number Phone">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "YYYY/MM/DD">
+					<span class="label-input100">Date of Birth *</span>
+					<input class="input100" type="text" name="bday" placeholder="YYYY/MM/DD">
+				</div>
+
+				<div class="w-full js-show-service">
+					<div class="wrap-contact100-form-radio">
+						<span class="label-input100">Gender</span>
+
+						<div class="contact100-form-radio m-t-15">
+							<input class="input-radio100" id="radio1" type="radio" name="gender" value="Male" checked="checked">
+							<label class="label-radio100" for="radio1">
+								Male
+							</label>
+						</div>
+
+						<div class="contact100-form-radio">
+							<input class="input-radio100" id="radio2" type="radio" name="gender" value="Female">
+							<label class="label-radio100" for="radio2">
+								Female
+							</label>
+						</div>
+
+						<div class="contact100-form-radio">
+							<input class="input-radio100" id="radio3" type="radio" name="gender" value="Other">
+							<label class="label-radio100" for="radio3">
+								Other
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Please Car Registration Number">
+					<span class="label-input100">CAR REGISTRATION *</span>
+					<input class="input100" type="text" name="carReg" placeholder="Enter Your Car Registration Number">
+				</div>
+
+
+				<div class="w-full js-show-service">
+					<div class="wrap-contact100-form-radio">
+						<span class="label-input100">Car use</span>
+
+						<div class="contact100-form-radio m-t-15">
+							<input class="input-radio100" id="radio4" type="radio" name="carUse" value="Social only" checked="checked">
+							<label class="label-radio100" for="radio4">
+								Social only
+							</label>
+						</div>
+						<div class="contact100-form-radio m-t-15">
+							<input class="input-radio100" id="radio5" type="radio" name="carUse" value="Social and commuting">
+							<label class="label-radio100" for="radio5">
+								Social and commuting
+							</label>
+						</div>
+						<div class="contact100-form-radio m-t-15">
+							<input class="input-radio100" id="radio6" type="radio" name="carUse" value="Social, commuting and for business">
+							<label class="label-radio100" for="radio6">
+								Social, commuting and for business
+							</label>
+						</div>
+				</div>
+
+
+				<div class="w-full js-show-service">
+					<div class="wrap-contact100-form-radio">
+						<span class="label-input100">Car type</span>
+
+						<div class="contact100-form-radio m-t-15">
+							<input class="input-radio100" id="radio7" type="radio" name="carType" value="Manual" checked="checked">
+							<label class="label-radio100" for="radio7">
+								Manual
+							</label>
+						</div>
+						<div class="contact100-form-radio m-t-15">
+							<input class="input-radio100" id="radio8" type="radio" name="carType" value="Automatic">
+							<label class="label-radio100" for="radio8">
+								Automatic
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="w-full js-show-service">
+					<div class="wrap-contact100-form-radio">
+						<span class="label-input100">Type of cover</span>
+
+						<div class="contact100-form-radio m-t-15">
+							<input class="input-radio100" id="radio9" type="radio" name="carCover" value="Comprehensive" checked="checked">
+							<label class="label-radio100" for="radio9">
+								Comprehensive
+							</label>
+						</div>
+						<div class="contact100-form-radio m-t-15">
+							<input class="input-radio100" id="radio10" type="radio" name="carCover" value="Third party, fire and theft">
+							<label class="label-radio100" for="radio10">
+								Third party, fire and theft
+							</label>
+						</div>
+						<div class="contact100-form-radio m-t-15">
+							<input class="input-radio100" id="radio11" type="radio" name="carCover" value="Third party only">
+							<label class="label-radio100" for="radio11">
+								Third party only
+							</label>
+						</div>
+					</div>
+
+					<div class="wrap-contact100-form-range">
+						<span class="label-input100">Contribution *</span>
+
+						<div class="contact100-form-range-value">
+							$<span id="value-lower">610</span> - $<span id="value-upper">980</span>
+							<input type="text" name="from-value">
+							<input type="text" name="to-value">
+						</div>
+
+						<div class="contact100-form-range-bar">
+							<div id="filter-bar"></div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+
+
+			$(".js-select2").each(function(){
+				$(this).on('select2:close', function (e){
+					if($(this).val() == "Please chooses") {
+						$('.js-show-service').slideUp();
+					}
+					else {
+						$('.js-show-service').slideUp();
+						$('.js-show-service').slideDown();
+					}
+				});
+			});
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/noui/nouislider.min.js"></script>
+	<script>
+	    var filterBar = document.getElementById('filter-bar');
+
+	    noUiSlider.create(filterBar, {
+	        start: [ 0, 300 ],
+	        connect: true,
+	        range: {
+	            'min': 50,
+	            'max': 1000
+	        }
+	    });
+
+	    var skipValues = [
+	    	document.getElementById('value-lower'),
+	    	document.getElementById('value-upper')
+	    ];
+
+	    filterBar.noUiSlider.on('update', function( values, handle ) {
+	        skipValues[handle].innerHTML = Math.round(values[handle]);
+	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
+	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
+	    });
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
