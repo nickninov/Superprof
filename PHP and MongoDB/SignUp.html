@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head> <!--This is for main title-->
+        <title> Mobile Store 
+        </title>
+        <link rel="stylesheet" type="text/css" href="CSS/add style.css"> <!--This is for the Home page "CSS" link-->
+
+</head>
+
+<body>
+        <div id="header">  <!--This is for main heading-->
+                <div id="Title">
+                        <h1>Register</h1>
+
+                </div>
+                <div id="NavigationBar"> <!--This section below is for the navigation bars-->
+                        <a href="index.html"> Home</a>
+                        <a href="Iphone.html">iPhone</a>
+                        <a href="Samsung.html">Samsung</a>
+                        <a href="Basket.php">Basket</a>
+                        <a href="Login.html">Log in</a>
+                </div>
+        </div>
+
+        <div id="maincontents"> <!--This section below is for register fields-->
+
+            <form action="./PHP/register.php" method="POST" style="margin-left: 5%; margin-top: 5%">
+                <input type="text" name="name" class = "inputBox" placeholder="Full name" required>
+
+                <input type="text" name="email" class = "inputBox" placeholder="example@gmail.com" required>
+
+                <input type="text" name="address" class = "inputBox" placeholder="Full Address" required>
+
+                <br>
+
+                <input type="password" name="password" class = "inputBox" placeholder="Password" required>
+
+                <input type="password" name="confPassword" class = "inputBox" placeholder="Confirm password" required>
+
+                 <input type="Submit" class="checkoutButton" value="Register!">
+            </form>
+        <div>
+
+                <div id="Footer"> <!--This is for the footer-->
+                        <p> Any queries contact us at: latestmobile@gmail.com or call us on 07913113089 Thanks.</p>
+                </div>
+        </div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head> <!--This is for main title-->
+        <title> Mobile Store 
+        </title>
+        <link rel="stylesheet" type="text/css" href="CSS/Index style.css"> <!--This is for the Home page "CSS" link-->
+
+</head>
+
+<body>
+        <div id="header">  <!--This is for main heading-->
+                <div id="Title">
+                        <h1>Welcome to the latest mobile phones</h1>
+
+                </div>
+                <div id="NavigationBar"> <!--This section below is for the navigation bars-->
+                        <a>Home</a>
+                        <a href="Iphone.html">iPhone</a>
+                        <a href="Samsung.html">Samsung</a>
+                        <a href="Basket.php">Basket</a>
+                        <a href="Login.html">Login</a>
+                </div>
+
+                <!-- Search options -->
+                <div id="searchBar">
+                	<!-- Search bar -->
+                	<form action="./PHP/search.php" method="POST">
+                		
+                		<input type="text" name="search" class = "inputBox" placeholder="Search item" required>
+
+						<input type="Submit" class="checkoutButton" value="Search" style="font-size: 1.2em;">
+                	</form>
+
+                </div>
+        </div>
+
+        <div id="maincontents"> <!--This section below is for the mobile phone images-->
+                <div class ="phoneimage"><img id="iphone6" height="80%" src="Images/iphone6.jpg"> <h1>iPhone 6 &pound;139.99</h1>
+
+                	<!-- Add a iPhone 6 to basket -->
+                	<form method="GET" action="./PHP/add.php?">
+
+                		<!-- User cannot see these two input boxes -->
+                		<input type="hidden" name="name" value="iPhone 6">
+                		<input type="hidden" name="price" value="139.99">
+
+                		<!-- Used to indicate to which page to redirect -->
+                		<input type="hidden" name="page" value="index">
+
+                		<!-- Purchase button -->
+                		<input type="submit" value="Purchase" style="margin-top: 3%; background-color: white; padding: 1%">
+                	</form>
+                </div> 
+
+                <div class ="phoneimage"><img id="iphone7" height="80%" src="Images/iphone7.jpg"> <h1>iPhone 7 &pound;199.99</h1>
+
+                	<!-- Add a iPhone 7 to basket -->
+                	<form method="GET" action="./PHP/add.php?">
+
+                		<!-- User cannot see these two input boxes -->
+                		<input type="hidden" name="name" value="iPhone 7">
+                		<input type="hidden" name="price" value="199.99">
+
+                		<!-- Used to indicate to which page to redirect -->
+                		<input type="hidden" name="page" value="index">
+
+                		<!-- Purchase button -->
+                		<input type="submit" value="Purchase" style="margin-top: 3%; background-color: white; padding: 1%">
+                	</form>
+                </div>
+
+                <div class ="phoneimage"><img id="iphone8" height="80%" src="Images/iphone8.jpg"> <h1>iPhone 8 &pound;219.99</h1>
+
+                	<!-- Add a iPhone 8 to basket -->
+                	<form method="GET" action="./PHP/add.php?">
+
+                		<!-- User cannot see these two input boxes -->
+                		<input type="hidden" name="name" value="iPhone 8">
+                		<input type="hidden" name="price" value="219.99">
+
+                		<!-- Used to indicate to which page to redirect -->
+                		<input type="hidden" name="page" value="index">
+
+                		<!-- Purchase button -->
+                		<input type="submit" value="Purchase" style="margin-top: 3%; background-color: white; padding: 1%">
+                	</form>
+                </div>
+
+                <div class ="phoneimage"><img id="samsungs7" height="80%" src="Images/samsung s7.jpg"> <h1>Samsung S7 &pound;110.99</h1>
+
+                	<!-- Add a Samsung S7 to basket -->
+                	<form method="GET" action="./PHP/add.php?">
+
+                		<!-- User cannot see these two input boxes -->
+                		<input type="hidden" name="name" value="Samsung S7">
+                		<input type="hidden" name="price" value="110.99">
+
+                		<!-- Used to indicate to which page to redirect -->
+                		<input type="hidden" name="page" value="index">
+
+                		<!-- Purchase button -->
+                		<input type="submit" value="Purchase" style="margin-top: 3%; background-color: white; padding: 1%">
+                	</form>
+
+                </div>
+
+                <div class ="phoneimage"><img id="samsungs8" height="80%" src="Images/samsung s8.jpg"> <h1>Samsung S8 &pound;189.99</h1>
+
+                	<!-- Add a iPhone 8 to basket -->
+                	<form method="GET" action="./PHP/add.php?">
+
+                		<!-- User cannot see these two input boxes -->
+                		<input type="hidden" name="name" value="Samsung S8">
+                		<input type="hidden" name="price" value="189.99">
+
+                		<!-- Used to indicate to which page to redirect -->
+                		<input type="hidden" name="page" value="index">
+
+                		<!-- Purchase button -->
+                		<input type="submit" value="Purchase" style="margin-top: 3%; background-color: white; padding: 1%">
+                	</form>
+                </div>
+
+
+                <div class ="phoneimage"><img id="samsungs9" height="80%" src="Images/samsung s9.jpg"> <h1>Samsung S9 &pound;299.99</h1>
+
+                	<!-- Add a iPhone 8 to basket -->
+                	<form method="GET" action="./PHP/add.php?">
+
+                		<!-- User cannot see these two input boxes -->
+                		<input type="hidden" name="name" value="Samsung S9">
+                		<input type="hidden" name="price" value="299.99">
+
+                		<!-- Used to indicate to which page to redirect -->
+                		<input type="hidden" name="page" value="index">
+                		
+                		<!-- Purchase button -->
+                		<input type="submit" value="Purchase" style="margin-top: 3%; background-color: white; padding: 1%">
+                	</form>
+                </div>
+
+
+        </div>	
+        <div>
+
+                <div id="Footer"> <!--This is for the footer-->
+                        <p> Any queries contact us at: latestmobile@gmail.com or call us on 07913113089 Thanks.</p>
+                </div>
+        </div>
+
+</body>
+</html>

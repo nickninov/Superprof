@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body { /* White background colour */
+    background-color: white;
+}
+
+#header {  /* Blue header colour at the top */
+    background-color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+#Title { /* Lightskyblue color for the background and darkblue color for the text */
+    background-color: lightskyblue;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0px;
+    padding: 0px;
+    text-align: center;
+    color: darkblue
+}
+
+#header a { /* Lime colour text for the navigation bar */
+    display: inline-block;
+    position: relative;
+    width: 19vw;
+    text-align: center;
+    text-decoration: none;
+    color: lime;
+}
+
+#Footer { /* This is for the footer */
+    height: 5vh;
+    width: 100vw;
+    background-color: darkblue;
+    bottom: 0vh;
+    position: fixed;
+    color: lime;
+    ;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.phoneimage { /* This is for the phone image postioning*/
+    position: relative;
+    height: 30vw;
+    width: 30vw;
+    float: left;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+}
+
+#Loginbutton { /* This is for the login button */
+    font-size: 4vh;
+    color:white;
+    background-color: darkblue;
+}
+
+#maincontents { /* This is for the login input fields */
+    font-size: 5vh;
+    height: 50vh;
+    padding-top: 8vh;
+    width: 50vw;
+    background-color:white;
+    margin: auto;
+    margin-top: 12vh;
+    color: azure;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#maincontents form p { /* Makes the input fields to have the blue texts */
+    color:blue;
+    margin-top: 5vh;
+}
