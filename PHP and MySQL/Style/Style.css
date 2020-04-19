@@ -1,0 +1,75 @@
+body {
+	background: url(../Images/background4.JPG);
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	transition: color 0.2s;
+	font-size: 1.5em;
+}
+
+.link {
+	margin: 3%;
+
+}
+
+a:hover{
+	color: black;
+}
+
+
+
+p {
+	
+	color: white;
+	font-size: 24px;
+}
+
+p4 {
+	
+	color: white;
+	font-size: 25px;
+}
+
+
+#form {
+	position: fixed;
+	top: 55%;
+	right: 10%;
+	color: white;
+	font-size: 17px;
+	float: right;
+	/*background-color: red;*/
+}
+
+r {
+	
+ color: red;
+}
+
+.input {
+	padding: 1%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	font-size: 10pt;
+	border-radius: 2%;
+}
+
+.btn {
+	
+}
+
+
+
+
+h1 {
+	
+	color: white;
+
+}
+
