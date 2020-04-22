@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Users</title>
+        <meta name="description" content="APP Web Task 5">
+        <meta name="author" content="SitePoint">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="test.css">
+		<link rel="stylesheet" href="stylesheet.css">
+		
+	
+    </head>
+  
+    <body >
+    <header ><h2>APP Single Page App</h2></header>
+    <div >
+            <section id="sectUsers" >
+                <Div class="w3-container w3-green">
+                    <h2 >Users</h2>
+                    <div id="divPageNumber">Page <span id="pageNumber">1</span> of <span id="totalPages">2</span></div>
+                    <button class="btnPrevious">Previous</button> 
+					<button class="btnNext" >Next</button>
+					</div>
+					
+					
+					<div class="jumbotron jumbotron-fluid"> 
+					<table class="table-hover">
+                    
+					
+                        <tbody><tr  id="tblUserHeader">
+                            <th>User ID</th> 
+                            <th>Email</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Avatar</th>
+                        </tr>
+						
+			
+
+					<img id="image-holder" alt="">
+					
+                    <tr  id="user1"><td >1</td><td >george.bluth@reqres.in</td><td>George</td><td>Bluth</td><td ><img src="https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg" alt="avatar"></td></tr>
+					<tr  id="user2"><td >2</td><td >janet.weaver@reqres.in</td><td>Janet</td><td>Weaver</td><td ><img src="https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg" alt="avatar"></td></tr>
+					<tr  id="user3"><td >3</td><td >emma.wong@reqres.in</td><td>Emma</td><td>Wong</td><td ><img src="https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg" alt="avatar"></td></tr>
+					<tr  id="user4"><td >4</td><td >eve.holt@reqres.in</td><td>Eve</td><td>Holt</td><td ><img src="https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg" alt="avatar"></td></tr>
+					<tr  id="user5"><td >5</td><td >charles.morris@reqres.in</td><td>Charles</td><td>Morris</td><td ><img src="https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg" alt="avatar"></td></tr>
+					<tr  id="user6"><td >6</td><td >tracey.ramos@reqres.in</td><td>Tracey</td><td>Ramos</td><td ><img src="https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg" alt="avatar"></td></tr></tbody></table>
+
+				</div>
+				
+				<div id = "test">
+				
+				
+				
+				
+				</div>
+            
+                <section id="sectUser">
+                    <div class="w3-container w3-yellow">
+
+                        <div style="background-color: gray !important; color: white">
+                            <h2>User</h2>
+                            <div>
+                                <label>User ID:</label>
+                                <input type="text" id="user" ><br>
+                                <button id="btnSearchUser">Search</button>
+                                
+                                <div>
+                                    <h1 id="fullName"></h1>
+                                    <h1 id="userEmail"></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+		
+            <section id="sectUser" >
+                <div class="w3-container w3-yellow">
+                    <h2>Update user</h2>
+                    <div >
+
+                        <form id="frmUser" >
+                            <label>User ID:</label> <br>
+                            <input type="text" id="userID" ><br>
+                            <label>Email:</label> <br>
+                            <input type="text" id="userEmail" ><br>
+                            <label>First Name:</label> <br>
+                            <input type="text" id="userFirstName" ><br>
+                            <label>Last Name:</label> <br>
+                            <input type="text" id="userLastName" ><br><br><br>
+                            <div>
+                                <button id="btnSaveUser" >Save Changes</button>
+                                <button id="btnDeleteUser" >Delete User</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+			
+			
+			
+			
+            <section id="sectNewUser" >
+                <div class="w3-container w3-blue" >
+                    <h2 >New User</h2>
+					<p> Add a user<P>
+                    <div>
+					
+	                    <!-- <form id="frmNewUser" > -->
+	                        <label>First name:</label>
+		                    <input type="text"  class="1name" id="firstName"><br>
+
+	                        <label>Last name:</label>
+	                        <input type="text" class="2name" id="lastName" > <br>
+
+							<label>Email:</label>
+							<input type="text" class="email" id="email" > <br>
+
+							<div>
+                        		<button id="btnGetUsers"class="w3-button">users</button>
+                    		</div>
+						<!-- </form> -->
+					</div>		
+                </div>
+            </section>
+    </div>
+	<script src="test.js"></script> 
+    </body>
+</html>
