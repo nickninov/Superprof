@@ -1,2 +1,2 @@
-# Teaching - Students' work
-Examples of my students' work
+# Superprof - Students' work
+Examples of my Superprof students' work.
